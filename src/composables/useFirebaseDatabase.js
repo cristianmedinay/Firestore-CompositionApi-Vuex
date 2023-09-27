@@ -1,5 +1,6 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
+//https://stackoverflow.com/questions/71289146/firebase-question-uncaught-typeerror-firebaseapp-firestore-is-not-a-function
 
 const firebaseConfig = {
     apiKey: "AIzaSyAcQb4R-reiTMlcYSxZNvl_83cyHh-Mqy0",
@@ -20,11 +21,7 @@ const firebaseConfig = {
                 firebase.initializeApp(firebaseConfig);
             }
             return firebase.firestore();
-            /* const firebaseApp = firebase.initializeApp(firebaseConfig)
-
-            let firestore = firebaseApp.firestore()
-
-            return firestore; */
+          
         }
         
         return {connection}
